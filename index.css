@@ -1,3 +1,122 @@
+@font-face {
+   font-family: 'Montserrat';
+   src: url('./fonts/Montserrat/static/Montserrat-Regular.ttf');
+   font-weight: 400;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Montserrat';
+   src: url('./fonts/Montserrat/static/Montserrat-Thin.ttf');
+   font-weight: 100;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Montserrat';
+   src: url('./fonts/Montserrat/static/Montserrat-ExtraLight.ttf');
+   font-weight: 200;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Montserrat';
+   src: url('./fonts/Montserrat/static/Montserrat-Light.ttf');
+   font-weight: 300;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Montserrat';
+   src: url('./fonts/Montserrat/static/Montserrat-MediumItalic.ttf');
+   font-weight: 500;
+   font-style: italic;
+}
+
+@font-face {
+   font-family: 'Montserrat';
+   src: url('./fonts/Montserrat/static/Montserrat-Medium.ttf');
+   font-weight: 500;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Montserrat';
+   src: url('./fonts/Montserrat/static/Montserrat-SemiBold.ttf');
+   font-weight: 600;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Montserrat';
+   src: url('./fonts/Montserrat/static/Montserrat-Bold.ttf');
+   font-weight: 700;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Montserrat';
+   src: url('./fonts/Montserrat/static/Montserrat-ExtraBold.ttf');
+   font-weight: 800;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Roboto';
+   src: url('./fonts/Roboto/static/Roboto-Thin.ttf');
+   font-weight: 100;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Roboto';
+   src: url('./fonts/Roboto/static/Roboto-ExtraLight.ttf');
+   font-weight: 200;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Roboto';
+   src: url('./fonts/Roboto/static/Roboto-Light.ttf');
+   font-weight: 300;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Roboto';
+   src: url('./fonts/Roboto/static/Roboto-Regular.ttf');
+   font-weight: 400;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Roboto';
+   src: url('./fonts/Roboto/static/Roboto-Medium.ttf');
+   font-weight: 500;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Roboto';
+   src: url('./fonts/Roboto/static/Roboto-SemiBold.ttf');
+   font-weight: 600;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Roboto';
+   src: url('./fonts/Roboto/static/Roboto-Bold.ttf');
+   font-weight: 700;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Roboto';
+   src: url('./fonts/Roboto/static/Roboto-ExtraBold.ttf');
+   font-weight: 800;
+   font-style: normal;
+}
+
 * {
    padding: 0;
    margin: 0;
@@ -14,7 +133,7 @@ body {
    -ms-text-size-adjust: 100%;
    -moz-text-size-adjust: 100%;
    -webkit-text-size-adjust: 100%;
-   font-family: "Montserrat", sans-serif;
+   font-family: 'Montserrat', sans-serif;
 }
 
 h1,
@@ -90,6 +209,9 @@ a:active {
 section {
    overflow: hidden;
 }
+
+
+
 
 @media(prefers-reduced-motion) {
    .hidden-animation {
@@ -645,6 +767,7 @@ section {
 .headline__suptitle {
    color: rgb(93, 93, 93);
    font-weight: 500;
+   text-transform: uppercase;
 }
 
 .headline__title {
@@ -773,14 +896,6 @@ section {
 
 }
 
-.service__container {}
-
-.service__headline {}
-
-.service__suptitle {}
-
-.service__title {}
-
 .service__cards {
    margin-top: 40px;
    display: flex;
@@ -849,6 +964,7 @@ section {
 .dropdown-header span {
    font-size: 16px;
    font-weight: 500;
+   pointer-events: none;
 }
 
 .dropdown-content {

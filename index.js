@@ -1,29 +1,28 @@
 try {
    document.querySelectorAll('.dropdown-header').forEach((el) => {
-      el.addEventListener('click', (e) => dropdownFn(e))
+      el.addEventListener('click', (e) => {
+         const content = e.target.parentNode.querySelector('.dropdown-content');
+         const arrow = e.target.querySelector('.arrow');
+         const isOpen = content.classList.contains('open');
+
+         if (!isOpen) {
+            content.style.maxHeight = 'none';
+            const contentHeight = content.scrollHeight + 80 + 'px';
+            content.style.maxHeight = '0';
+            content.classList.add('open');
+
+            setTimeout(() => {
+               content.style.maxHeight = contentHeight;
+            }, 0);
+            arrow.innerHTML = "-";
+         } else {
+            content.style.maxHeight = '0';
+            content.classList.remove('open');
+            arrow.innerHTML = "+";
+         }
+      })
+
    })
-   function dropdownFn(e) {
-      const content = e.target.parentNode.querySelector('.dropdown-content');
-      console.log(content.classList)
-      const arrow = e.target.querySelector('.arrow');
-      const isOpen = content.classList.contains('open');
-
-      if (!isOpen) {
-         content.style.maxHeight = 'none';
-         const contentHeight = content.scrollHeight + 80 + 'px';
-         content.style.maxHeight = '0';
-         content.classList.add('open');
-
-         setTimeout(() => {
-            content.style.maxHeight = contentHeight;
-         }, 0);
-         arrow.innerHTML = "-";
-      } else {
-         content.style.maxHeight = '0';
-         content.classList.remove('open');
-         arrow.innerHTML = "+";
-      }
-   }
 } catch (e) {
    console.log(e)
 }
