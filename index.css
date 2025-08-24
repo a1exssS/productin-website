@@ -306,7 +306,7 @@ section {
 }
 
 .navigation__text {
-   color: white;
+   color: var(--primary-white);
    font-weight: 600;
    font-size: 24px;
    text-transform: uppercase;
@@ -331,7 +331,7 @@ section {
 }
 
 .navigation__item-text {
-   color: white;
+   color: var(--primary-white);
    font-size: 18px;
 }
 
@@ -373,7 +373,7 @@ section {
    }
 
    .navigation__text {
-      color: white;
+      color: var(--primary-white);
       font-weight: 600;
       font-size: 18px;
       text-transform: uppercase;
@@ -402,7 +402,7 @@ section {
    height: 100%;
    flex-direction: column;
    max-width: 800px;
-   color: white;
+   color: var(--primary-white);
    gap: 10px;
    font-family: "Roboto", sans-serif;
    align-items: start;
@@ -438,14 +438,14 @@ section {
 .hero__contact {
    display: inline-block;
    margin-top: 20px;
-   color: white;
+   color: var(--primary-white);
    padding: 16px 40px;
    background: var(--primary-blue);
    font-size: 18px;
    font-weight: 500;
    transform: translateX(-100px);
    opacity: 0;
-   transition: transform .2s ease .2s, opacity .2s ease .2s;
+   transition: transform .2s ease .2s, opacity .2s ease .2s, color .2s ease;
 
 }
 
@@ -604,7 +604,7 @@ section {
    line-height: 1.2;
    padding: 8px 30px;
    background: var(--primary-blue);
-   color: white;
+   color: var(--primary-white);
    font-weight: 500;
    transition: background .1s ease;
 
@@ -1017,7 +1017,7 @@ section {
 }
 
 .dropdown-item__hightlight {
-   color: white;
+   color: var(--primary-white);
    background-color: var(--primary-blue);
    display: inline-block;
    margin-left: auto;
