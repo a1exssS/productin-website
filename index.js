@@ -29,13 +29,19 @@ try {
 
 try {
 
+   const location = document.querySelector('[data-location]').dataset.location.split(' ')
    function initMap() {
       let map = new ymaps.Map('map', {
-         center: [48.0192607809712, 37.80341919873047],
+         center: location,
          zoom: 10
       });
 
-      let placemark = new ymaps.Placemark([48.0192607809712, 37.80341919873047], {}, {})
+      let placemark = new ymaps.Placemark(location, {}, {
+         iconLayout: 'default#image',
+         iconImageHref: "./images/logo.png",
+         iconImageSize: [40, 40],
+         iconImageOffset: [0, 0]
+      })
 
       map.controls.remove('geolocationControl')
       map.controls.remove('searchControl')
