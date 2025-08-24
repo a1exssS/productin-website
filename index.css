@@ -1022,6 +1022,11 @@ section {
    border-radius: 8px;
 }
 
+.dropdown-item__hightlight_left {
+   margin-right: auto;
+   margin-left: 0;
+}
+
 .dropdown-header span.arrow {
    font-size: 28px;
    font-weight: 500;
