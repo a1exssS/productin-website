@@ -1163,6 +1163,7 @@ section {
 .footer__box {
    display: flex;
    flex-direction: column;
+   justify-content: center;
    gap: 12px;
 }
 
