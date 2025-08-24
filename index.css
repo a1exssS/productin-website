@@ -210,9 +210,6 @@ section {
    overflow: hidden;
 }
 
-
-
-
 @media(prefers-reduced-motion) {
    .hidden-animation {
       transition: none;
@@ -226,10 +223,18 @@ section {
 
 :root {
    --primary-color: #1b1b1b;
+   --secodary-color: #5d5d5d;
    --primary-white: #ffffff;
    --primary-blue: #297bffff;
+   --primary-blue-hovered: #1f6be6;
 
-   --primary-bg:
+   --primary-bg: #e1e1e1;
+   --secondary-bg: #f5f5f5;
+   --card-shadow: #d8d8d8;
+
+   --card-bg: #f2f2f2;
+   --card-content-bg: #fafafa;
+   --card-bg-hovered: #f5f5f5;
 }
 
 
@@ -317,7 +322,7 @@ section {
    display: flex;
    align-items: center;
    gap: 6px;
-   color: #297bffff;
+   color: var(--primary-blue);
 }
 
 .navigation__item-image {
@@ -435,7 +440,7 @@ section {
    margin-top: 20px;
    color: white;
    padding: 16px 40px;
-   background: #297bffff;
+   background: var(--primary-blue);
    font-size: 18px;
    font-weight: 500;
    transform: translateX(-100px);
@@ -450,7 +455,7 @@ section {
 }
 
 .hero__contact:hover {
-   background: rgb(31, 107, 230);
+   background: var(--primary-blue-hovered);
 }
 
 @media (max-height:600px) {
@@ -512,7 +517,7 @@ section {
 
 .about {
    display: flex;
-   background-color: rgb(245, 245, 245);
+   background-color: var(--secondary-bg);
    flex-direction: column;
    justify-content: space-between;
    gap: 20px;
@@ -556,7 +561,7 @@ section {
    z-index: 2;
    display: flex;
    flex-direction: column;
-   background: rgb(235, 235, 235);
+   background: var(--primary-bg);
    padding: 40px;
    gap: 20px;
    align-items: start;
@@ -585,7 +590,7 @@ section {
    display: block;
    width: 60px;
    height: 2px;
-   background: #000;
+   background: var(--primary-color);
    margin-top: 18px;
 }
 
@@ -598,7 +603,7 @@ section {
    font-size: 18px;
    line-height: 1.2;
    padding: 8px 30px;
-   background: #297bffff;
+   background: var(--primary-blue);
    color: white;
    font-weight: 500;
    transition: background .1s ease;
@@ -606,7 +611,7 @@ section {
 }
 
 .about__link:hover {
-   background: rgb(31, 107, 230);
+   background: var(--primary-blue-hovered);
 }
 
 .about__items {
@@ -655,7 +660,7 @@ section {
 .about__item .about__item-image {
    width: 46px;
    height: 46px;
-   color: #297bffff;
+   color: var(--primary-blue);
 
 }
 
@@ -765,7 +770,7 @@ section {
 }
 
 .headline__suptitle {
-   color: rgb(93, 93, 93);
+   color: var(--secodary-color);
    font-weight: 500;
    text-transform: uppercase;
 }
@@ -829,7 +834,7 @@ section {
 }
 
 .our-work__box-item-text {
-   color: rgb(93, 93, 93);
+   color: var(--secodary-color);
    line-height: 1.5;
    font-family: "Roboto", sans-serif;
 }
@@ -911,7 +916,7 @@ section {
 }
 
 .service__suptitle {
-   color: rgb(93, 93, 93);
+   color: #5d5d5d;
    font-weight: 500;
    text-transform: uppercase;
 }
@@ -927,7 +932,7 @@ section {
    width: 300px;
    overflow: hidden;
    width: 100%;
-   box-shadow: 0px 4px 12px #d8d8d8;
+   box-shadow: 0px 4px 12px var(--card-shadow);
 
 }
 
@@ -947,8 +952,8 @@ section {
 }
 
 .dropdown-header {
-   background: #f2f2f2;
-   color: rgb(30, 30, 30);
+   background: var(--card-bg);
+   color: var(--primary-color);
    padding: 30px 20px;
    cursor: pointer;
    border-radius: 5px;
@@ -957,7 +962,7 @@ section {
    align-items: center;
    user-select: none;
    transition: background 0.3s;
-   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   box-shadow: 0 2px 5px var(--card-shadow);
 
 }
 
@@ -992,12 +997,12 @@ section {
    display: flex;
    flex-direction: column;
    gap: 14px;
-   background: rgb(250, 250, 250);
-   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   background: var(--card-content-bg);
+   box-shadow: 0 2px 5px var(--card-shadow);
 }
 
 .dropdown-item:hover {
-   background: #f5f5f5;
+   background: var(--card-bg-hovered);
 }
 
 .dropdown-item__title {
@@ -1008,12 +1013,12 @@ section {
 
 .dropdown-item__text {
    line-height: 1.2;
-   color: rgb(30, 30, 30);
+   color: var(--primary-color);
 }
 
 .dropdown-item__hightlight {
    color: white;
-   background-color: #297bffff;
+   background-color: var(--primary-blue);
    display: inline-block;
    margin-left: auto;
    padding: 10px;
@@ -1030,7 +1035,7 @@ section {
 .dropdown-header span.arrow {
    font-size: 28px;
    font-weight: 500;
-   color: #297bffff;
+   color: var(--primary-blue);
 }
 
 .arrow.open {
@@ -1038,7 +1043,7 @@ section {
 }
 
 .contact {
-   background: #e1e1e1;
+   background: var(--secondary-bg);
 }
 
 .contact__container {
@@ -1104,7 +1109,7 @@ section {
    list-style-type: disc;
    list-style-position: outside;
    line-height: 2;
-   color: #565656;
+   color: var(--primary-color);
 }
 
 @media (max-width:991px) {
@@ -1150,7 +1155,7 @@ section {
    padding: 20px 0;
    display: flex;
    align-items: center;
-   background: #e1e1e1;
+   background: var(--primary-bg);
    border-top: 1px solid #bfbfbf;
 }
 
@@ -1183,7 +1188,7 @@ section {
    align-items: center;
    gap: 12px;
 
-   color: rgb(0, 0, 0);
+   color: var(--primary-color);
    font-weight: 600;
    font-size: 18px;
    text-transform: uppercase;
